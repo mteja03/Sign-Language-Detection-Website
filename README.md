@@ -19,3 +19,13 @@ Running the django server
 python manage.py runserver
 ```
 Link to access the website [127.0.0.1:8000/](127.0.0.1:8000/)
+
+## Images
+Home Page
+<img width="1440" alt="home" src="https://user-images.githubusercontent.com/62012634/177539075-6bf13a87-09ce-47ce-9590-01a72bcbcdbe.png">
+
+Upload Page
+
+Detection Page
+
+Results
