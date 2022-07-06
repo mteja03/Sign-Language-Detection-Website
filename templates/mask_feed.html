@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./img/cv.ico" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel=”stylesheet” href=”{% static 'index.css' %}”>
+    <script src="{% static 'app.js' %}"></script>
+    <style>
+
+.parent{
+	display:flex;
+}
+.camera {
+width: 50%;
+
+
+}
+.ranges{
+width: 50%;
+
+
+}
+    </style>
+
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Mask Detection</h1>
+<div class="parent">
+<div class="camera">
+					<p>
+					 <img src="{% url 'mask' %}" alt="asdf"></br></br>
+					</p>
+
+				</div>
+
+
+<form action = "" method = "GET" id="range_form">
+    {% csrf_token %}
+<div class = "ranges">
+<div class="range-slider">
+  <input class="range-slider__range" name="slider1" type="range"  value = "{{ slider_value}}"min="0" max="500" id="slider1">
+  <span class="range-slider__value" id="slider_span1">1</span>
+</div>
+
+</form>
+
+</div>
+ <script>
+	    var slider1 = document.getElementById("slider1");
+var output1 = document.getElementById("slider_span1");
+var form = document.getElementById("range_form");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+  //form.submit();
+ e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'{% url "mask_feed" %}',
+            data:
+            {
+                slider1:$("#slider1").val(),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:function(){
+
+                    }
+            })
+}
+
+    </script>
+
+</div>
+
+
+
+</body>
+</html>

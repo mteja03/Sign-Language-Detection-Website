@@ -1,0 +1,89 @@
+<!-- generates the absolute URL of static files -->
+{% load static %}
+<!-- document type declaration -->
+<!DOCTYPE html>
+<!-- Specifies the language code -->
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- utf-8 character encoding  -->
+    <meta charset="UTF-8">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website Icon -->
+    <link rel="icon" href="../static/hand_favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="{% static 'video_feed.css' %}" media="screen">
+    <!-- Linking Java Script file -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <!-- Website title -->
+    <title>Video Detection</title>
+</head>
+
+<!-- Body -->
+
+<body>
+    <div>
+        <!-- Icon -->
+        <a href="/"><img src="{% static 'back.png' %}" alt="back" width="40px"></a>
+    </div>
+
+    <header>
+        <!-- Website Heading -->
+        <h1>Sign Language Detection</h1>
+    </header>
+    <!-- Instructions -->
+    <div class="message">
+        <p>Show sign language hand gestures to webcam in the green box displayed on screen, masking will
+            be
+            displayed at
+            right corner and predicted sign will be displayed at top left corner. Masking adjuster can be used to adjust
+            masking based on lighting conditions. </p>
+    </div>
+    <!-- Main -->
+    <main>
+        <div class="parent">
+            <div class="camera">
+                <p>
+                    <!-- Video feed from Backend -->
+                    <img src="{% url 'video' l_s %}" alt="asdf"></br></br>
+                </p>
+            </div>
+
+
+            <form action="" method="POST" id="range_form" class="range_form">
+                <!-- Masking slider -->
+                {% csrf_token %}
+                <!-- heading for masking slider -->
+                <h2>Lighting adjuster</h2>
+                <div class="range-slider">
+                    <input class="range-slider__range" name="slider1" type="range" min="1" value="{{l_s}}" max="255"
+                        id="slider1">
+                    <span class="range-slider__value" id="slider_span1">{{l_s}}</span>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- JS for connecting Backend -->
+    <script>
+        var slider1 = document.getElementById("slider1");
+        var output1 = document.getElementById("slider_span1");
+        var form = document.getElementById("range_form");
+        output1.innerHTML = slider1.value;
+        slider1.oninput = function (e) {
+            output1.innerHTML = this.value;
+            form.submit();
+
+        }
+
+    </script>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!-- generates the absolute URL of static files -->
+{% load static%}
+<!-- document type declaration -->
+<!DOCTYPE html>
+<!-- Specifies the language code -->
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+	<!-- utf-8 character encoding  -->
+	<meta charset="utf-8" />
+	<!-- Title -->
+	<title>Sign Detection</title>
+	<!-- Icon of the website -->
+	<link rel="icon" href="../static/hand_favicon.ico">
+	<!-- Linking CSS file -->
+	<link rel="stylesheet" href="{% static 'upload.css' %}" media="screen" />
+</head>
+
+<!-- Body -->
+
+<body>
+	<div>
+		<!-- Icon -->
+		<a href="/"><img src="{% static 'back.png' %}" alt="back" width="40px" /></a>
+	</div>
+	<!-- Header -->
+	<header>
+		<!-- Website Heading -->
+		<h1>Sign Language Detection</h1>
+	</header>
+	<!-- Instructions -->
+	<div class="message">
+		<p>
+			Upload only images of sign language hand gestures.
+		</p>
+	</div>
+
+	<!-- Main -->
+	<main>
+		<!-- Linking the Python Model(Backend) -->
+		<form method="post" enctype="multipart/form-data">
+			<!-- Upload function -->
+			{% csrf_token %}
+			<div class="form_container">{{ form.as_table }}</div>
+			<!-- Predicted result -->
+			{% if predicted_char %}
+			<!-- Printing the result in website -->
+			<div class="pred_container">
+				<h2>Predicted Sign is : {{predicted_char}}</h2>
+			</div>
+			<!-- Button to upload another Image -->
+			<div class="btn_container">
+				<button class="button">Upload another image</button>
+			</div>
+			<br />
+			<br />
+
+			{% elif predicted_char == 0 %}
+			<!-- Upload Button -->
+			<div class="btn_container">
+				<button class="button">Upload</button>
+			</div>
+
+			<br />
+			<br />
+
+			<div class="pred_container">
+				<h2></h2>
+			</div>
+			{% else %}
+
+			<div class="btn_container">
+				<!-- Button to upload another Image -->
+				<button class="button">Upload another image</button>
+			</div>
+
+			<br />
+			<br />
+
+			<div class="pred_container">
+				<!-- Exception Handling -->
+				<h2>Invalid gesture image</h2>
+			</div>
+			{% endif %}
+		</form>
+	</main>
+</body>
+
+</html>

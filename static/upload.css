@@ -1,0 +1,99 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* ----------------Header---------------------- */
+body {
+	background-color: rgba(97, 76, 238, 255);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+header {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	margin-top: -20px;
+}
+
+header h1 {
+	color: white;
+	font-size: 70px;
+	text-align: center;
+	font-family: Calibri, sans-serif;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.message p {
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	font-size: 25px;
+	text-align: center;
+	font-family: Calibri, sans-serif;
+	margin-top: 60px;
+}
+
+.form_container {
+	display: flex;
+	align-items: center;
+	margin-top: 120px;
+	margin-left: 10%;
+}
+
+input[type="file"] {
+	font-size: 36px;
+	color: white;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Calibri, sans-serif;
+}
+
+.errorlist {
+	display: none;
+}
+
+.btn_container {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button {
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 36px;
+	cursor: pointer;
+	border-radius: 12px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10% !important;
+	font-family: Calibri, sans-serif;
+}
+
+.pred_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center !important;
+	color: white;
+}
+
+.pred_container h2 {
+	font-size: 40px;
+	font-family: Calibri, sans-serif;
+}

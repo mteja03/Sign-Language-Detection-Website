@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(97, 76, 238, 255);
+    color: white;
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: -60px;
+}
+
+header h1 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+}
+
+.message p {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    margin-top: -30px;
+}
+
+.parent {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.camera {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.range_form {
+    align-self: center;
+    margin-top: -40px;
+}
+
+.range_form h2 {
+    text-align: center;
+    font-family: Calibri, sans-serif;
+
+}

@@ -1,0 +1,55 @@
+<!-- generates the absolute URL of static files -->
+{% load static%}
+<!-- document type declaration -->
+<!DOCTYPE html>
+<html>
+
+<!-- Head  -->
+
+<head>
+    <!-- utf-8 character encoding  -->
+    <meta charset="utf-8">
+    <!-- Title -->
+    <title>Sign Detection</title>
+    <!-- Icon of the website -->
+    <link rel="icon" href="../static/hand_favicon.ico">
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="{% static 'index.css' %}" media="screen">
+</head>
+
+<!-- Body -->
+
+<body>
+    <header>
+        <!-- Heading -->
+        <h1>Sign Language Detection</h1>
+    </header>
+    <main>
+        <!-- Instructions -->
+        <p>Sign language can be identified through upload and webcam. Upload image of sign language hand gestures on
+            upload
+            page or show sign language hand gestures to webcam in real-time on webcam page.</p>
+        <section>
+            <div class="split">
+                <div class="item">
+                    <!-- Upload page button -->
+                    <a href="/upload"><img src="{% static 'upload2.png' %}" alt="upload">
+                        <!-- Button Title -->
+                        <h2>Upload</h2>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <!-- Webcame page button -->
+                    <a href="/webcam"><img src="{% static 'web.png' %}" alt="webcam">
+                        <!-- Button Title -->
+                        <h2>Webcam</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
