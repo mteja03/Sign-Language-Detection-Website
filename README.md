@@ -25,16 +25,16 @@ This dataset has a total of 52,000 images of signs(alphabets); the dataset is se
 
 ## Images
 Home Page
-<img width="500" text-align="center" alt="home" src="https://user-images.githubusercontent.com/62012634/177539075-6bf13a87-09ce-47ce-9590-01a72bcbcdbe.png">
+<img width="700" alt="home" src="https://user-images.githubusercontent.com/62012634/177539075-6bf13a87-09ce-47ce-9590-01a72bcbcdbe.png">
 
 Upload Page
-<img width="500" alt="upload" src="https://user-images.githubusercontent.com/62012634/177539562-32967063-7d24-4c76-919b-2967e1bde438.png">
+<img width="700" alt="upload" src="https://user-images.githubusercontent.com/62012634/177539562-32967063-7d24-4c76-919b-2967e1bde438.png">
 
 Detection Page
-<img width="500" alt="webcam" src="https://user-images.githubusercontent.com/62012634/177539873-a9ec2d80-78b2-4f25-bced-7904d9161fd4.png">
+<img width="700" alt="webcam" src="https://user-images.githubusercontent.com/62012634/177539873-a9ec2d80-78b2-4f25-bced-7904d9161fd4.png">
 
 Results
-<img width="500" alt="P" src="https://user-images.githubusercontent.com/62012634/177540004-8267d910-ce6a-42da-a48e-12943c6e5db0.png">
+<img width="700" alt="P" src="https://user-images.githubusercontent.com/62012634/177540004-8267d910-ce6a-42da-a48e-12943c6e5db0.png">
 
-<img width="500" alt="2" src="https://user-images.githubusercontent.com/62012634/177539928-7f20ae40-e440-47d9-8f26-66b59399b7d4.png">
+<img width="700" alt="2" src="https://user-images.githubusercontent.com/62012634/177539928-7f20ae40-e440-47d9-8f26-66b59399b7d4.png">
 
