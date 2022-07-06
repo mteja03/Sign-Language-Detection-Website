@@ -18,5 +18,4 @@ Running the django server
 ```bash
 python manage.py runserver
 ```
-Link to access the website
-[127.0.0.1:8000/](127.0.0.1:8000/)
+Link to access the website [127.0.0.1:8000/](127.0.0.1:8000/)
